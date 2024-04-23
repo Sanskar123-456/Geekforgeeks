@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,d;
+    int ans=0,mul=1;
+    cout<<"Enter the decimal to convert into binary : ";
+    cin>>n;
+    while(n!=0)
+    {
+        d=n%2;
+        n=n/2;
+        ans=d*mul+ans;
+        mul=mul*10;
+    }
+    cout<<"Binary form is : "<<ans; 
+}
