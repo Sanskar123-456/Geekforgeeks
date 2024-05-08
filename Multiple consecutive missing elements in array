@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[]={2,3,6,8,9};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int tp=0;
+    for(int i=arr[0];i<=arr[n-1];i++)
+    {
+        if(arr[tp]==i)
+        {
+            tp++;
+        }
+        else
+        {
+            cout<<i<<" ";
+        }
+    }
+
+    //2nd approach 
+    
+    int i;
+    int diff=arr[0]-0;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]-i!=diff)
+        {
+            while(diff<arr[i]-i)
+            {
+                cout<<diff+i<<" ";
+                diff++;
+            }
+        }
+    }
+}
